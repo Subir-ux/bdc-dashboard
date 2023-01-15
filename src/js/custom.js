@@ -35,7 +35,7 @@ $(document).ready(function(){
     
     //Blackmode 
     $(function(){
-        $('#colorChangeMode').click(function(){
+        $('.colorChangeMode').click(function(){
             $('body').toggleClass('blackMode');
         });
     });

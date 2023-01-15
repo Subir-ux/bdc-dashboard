@@ -45,7 +45,10 @@
             align-items: center;
             flex-direction: column;
             li{
-                margin-top: 15px;
+                margin-top: 10px;
+                @include media(">=mphone"){
+                    margin-top: 15px;
+                }
                 a{list-style: none;
                     height: 100%;
                     background-color: transparent;
@@ -74,7 +77,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 35px;
+            margin-bottom: 20px;
+            @include media(">=mphone"){
+                margin-bottom: 35px; 
+            }
             img{
                 width: 30px;
             }
@@ -84,7 +90,10 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            margin-top: 50px;
+            margin-top: 40px;
+            @include media(">=mphone"){
+                margin-top: 50px;
+            }
             svg{
                 width: 24px;
                 height: 24px;

@@ -1,0 +1,110 @@
+.blackMode{
+    background: $black1;
+    h1,h2,h3,h4,h5,h6,p{
+        color: $white !important;
+    }
+    .o-header {
+        .container-fluid {
+            .header-nav-wrapper {
+                .header-right-container {
+                    ul {
+                        li {
+                            box-shadow: 5px 5px 10px $black3;
+                            background: $black2;
+                            a {
+                                svg{
+                                    fill: $white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .o-footer{
+        background: $black1;
+    }
+    .table{
+        background:$black4;
+    }
+    .c-stores-ratio-table, .c-agent-table {
+        .card{
+            background:$black4;
+            -webkit-box-shadow: 0 7px 23px 0 #07080f5a;
+            -moz-box-shadow: 0 7px 23px 0 #07080f5a;
+            box-shadow: 0 7px 23px 0 #07080f5a;
+        }
+    }
+    .c-agent-table {
+        .card {
+            .card-body {
+                .table {
+                    // border-color: $gray4;
+                    thead {
+                        th{
+                            color:$white;
+                            &:nth-child(1), &:nth-child(2){
+                                border-color: #ececec10; 
+                            }
+                        }
+                    }
+                    .agent-details-row{
+                        color:$white;
+                    }
+                    tbody {
+                        tr{
+                            border-color: #ececec10; 
+                            &.agent-details-row {
+                                td{
+                                    color:$white;
+                                }
+                            }
+                        }
+                        td{
+                            &:nth-child(1),  &:nth-child(5){
+                                border-color: #ececec10; 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .c-stores-ratio-table{
+        .table{
+            caption{
+                color: $white;
+            }
+            tr{
+                color: $white;
+            }
+        }
+        .card {
+            .card-body {
+                .table {
+                    tr{
+                        color: $white;
+                    }  
+                    tbody {
+                        tr{
+                            border-color: #ececec10;
+                            caption{
+                                color: $white;
+                            }
+                             color: $white;
+                            td{
+                                color: $white;
+                            }
+                        }
+                    }
+                    &.caption-top {
+                        caption{
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

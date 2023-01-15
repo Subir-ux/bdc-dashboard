@@ -1,0 +1,226 @@
+.c-agent-table{
+    .card{
+        -webkit-box-shadow: 0px 3px 16px 0px #3249670D;
+        -moz-box-shadow: 0px 3px 16px 0px #3249670D;
+        box-shadow: 0px 3px 16px 0px #3249670D;
+        margin-bottom: 21px;
+        border-radius: 10px;
+        border: none;
+        .card-body{
+            padding: 0px;
+            .table {
+                margin-bottom: 0px;
+                border-radius: 10px;
+                thead{
+                    th{
+                        padding: 15px;
+                        font-family: $montserrat;
+                        font-weight: $bold;
+                        @include font-size($table-head-font-sizes);
+                        color: $black;
+                        &:nth-child(1),  &:nth-child(2){
+                            border-right: 1px solid $gray4;
+                        }
+                    }
+                }
+                tbody{
+                    tr{
+                        border-top:1px solid $gray4;
+                        &:nth-child(1){
+                            border-top: 0px;
+                        }
+                        &.agent-details-head{
+                            td{
+                                .agent-title-head-wrap{
+                                    display: table-row;
+                                    vertical-align: middle;
+                                    .agent-details-icon{
+                                        display: table-cell;
+                                        vertical-align: middle;
+                                        svg{
+                                            margin-right: 5px;
+                                        }
+                                    }
+                                    .agent-details-content{
+                                        display: table-cell;
+                                        vertical-align: middle;
+                                    }
+                                }
+                                &:nth-child(1){
+                                    color: $pink5;
+                                    svg{
+                                        fill: $pink5;
+                                    }
+                                }
+                                &:nth-child(2){
+                                    color: $green3;
+                                    svg{
+                                        fill: $green3;
+                                    }
+                                }
+                                &:nth-child(3){
+                                    color: $orange2;
+                                    svg{
+                                        fill: $orange2;
+                                    }
+                                }
+                                &:nth-child(4){
+                                    color: $blue3;
+                                    svg{
+                                        fill: $blue3;
+                                    }
+                                }
+                                &:nth-child(5){
+                                    color: $pink11;
+                                    svg{
+                                        fill: $pink11;
+                                    }
+                                }
+                                &:nth-child(6){
+                                    color: $pink11;
+                                    svg{
+                                        fill: $pink11;
+                                    }
+                                }
+                                &:nth-child(7){
+                                    color: $violet8;
+                                    svg{
+                                        fill: $violet8;
+                                    }
+                                }
+                                &:nth-child(8){
+                                    color: $skyblue1;
+                                    svg{
+                                        fill: $skyblue1;
+                                    }
+                                }
+                            }
+                        }
+                        td{
+                            padding: 15px;
+                            &:nth-child(1),  &:nth-child(5){
+                                border-right: 1px solid $gray4;
+                            }
+                        }
+                        td{
+                            .agent-dp-content-wrapper{
+                                display: table-row;
+                                vertical-align: middle;
+                                .agent-dp{
+                                    width: 45px;
+                                    height: 45px;
+                                    border-radius: 100%;
+                                    overflow: hidden;
+                                    // display: table-cell;
+                                    // vertical-align: middle;
+                                    img{
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                        object-position: top;
+                                        border-radius: 100%;
+                                    }
+                                }
+                                .agent-name-place{
+                                    display: table-cell;
+                                    vertical-align: middle;
+                                    padding-left: 15px;
+                                    @include media(">=mac"){
+                                        padding-left: 17px;
+                                    }
+                                    h5{
+                                        color: $black;
+                                        @include font-size($table-data-font-sizes);
+                                        font-family: $montserrat;
+                                        font-weight: $semi-bold;
+                                        line-height: 100% !important;
+                                        margin-bottom: 0px;
+                                    }
+                                    h6{
+                                        color: $gray8;
+                                        @include font-size($table-data-font-sizes);
+                                        font-family: $montserrat;
+                                        font-weight: $semi-bold;
+                                        margin-bottom: 0px;
+                                    }
+                                }
+                            }
+                        }
+                        &.agent-details-row{
+                            td{
+                                display: table-cell;
+                                vertical-align: middle;
+                                font-family: $montserrat;
+                                font-weight: $meduim;
+                                color: $black;
+                                padding-left: 40px;
+                                
+                                &:nth-child(1){
+                                    padding-left: 15px;
+                                }
+                                &:nth-child(5){
+                                    padding-left: 15px;
+                                }
+                            }
+                        }
+                    } 
+                }
+            }
+        }
+    }
+}
+
+
+
+.c-stores-ratio-table{
+    .card{
+        -webkit-box-shadow: 0px 3px 16px 0px #3249670D;
+        -moz-box-shadow: 0px 3px 16px 0px #3249670D;
+        box-shadow: 0px 3px 16px 0px #3249670D;
+        margin-bottom: 21px;
+        border-radius: 10px;
+        border: none;
+        .card-body{
+            .table {
+                tbody{
+                    tr{
+                        border-top:1px solid $gray4;
+                        td{
+                            color: $black;
+                            font-family: $montserrat;
+                            font-weight: $meduim; 
+                            padding:18px 7px 
+                        }
+                    } 
+                }
+                &.caption-top{
+                    caption{
+                        color: $black;
+                        @include font-size($table-data-font-sizes);
+                        font-family: $montserrat;
+                        font-weight: $bold;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.c-stores-ratio-table{
+    .table-responsive{
+        height: 400px;
+        overflow-y: auto;
+        position: relative;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+    }
+    .table{
+        thead{
+            position: sticky;
+            background: $white;
+            top: 0;
+        }
+    }
+}

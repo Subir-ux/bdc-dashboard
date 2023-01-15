@@ -1,0 +1,38 @@
+.lead-form-wrap{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    .select-lead-form{
+        width: 100%;
+        @include media(">=tablet"){
+            width: 313px;
+        }
+        select{
+            height: 48px;
+            border-radius: 7px;
+            border: 1px solid $gray1;
+            &:focus{
+                outline: none;
+                box-shadow: none;
+            }
+        }
+    }
+    .select-date-for-lead{
+        width: 46px;
+        height: 46px;
+        background: $green11;
+        border-radius: 6px;
+        margin-left: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-box-shadow: 0px 3px 20px 0px #0000000F;
+        -moz-box-shadow: 0px 3px 20px 0px #0000000F;
+        box-shadow: 0px 3px 20px 0px #0000000F;
+        svg{
+            stroke: $white;
+        }
+    }
+}
+

@@ -1,0 +1,187 @@
+.c-common-card{
+    transition: all .3s ease-in-out;
+    border-radius: 10px;
+    border: none;
+    position: relative;
+    margin-bottom: 21px;
+    min-height: 171px;
+    @include media(">=ltablet"){
+        // aspect-ratio: 1/0.9;
+    }
+    @include media(">=mdesktop"){
+        margin-bottom: 0px;
+    }
+    @include media(">=exldesktop"){
+        // aspect-ratio: 1/0.7;
+    }
+    &::before{
+        content: "";
+        width: 114px;
+        height: 100%;
+        position: absolute;
+        background-color: $green1;
+        border-radius: 100px 10px 10px 100px;
+        right: 0;
+        top: 0;
+        filter: opacity(0.5);
+        @include media(">=mac"){
+            width: 147px;
+        }
+    }
+    .card-body{
+        position: relative;
+        padding: 1.6rem;
+        .card-icon{
+            width: 70px;
+            height: 70px;
+            border: 5px solid $green2;
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            bottom: 23px;
+            right: 20px;
+            @include media(">=mac"){
+                width: 97px;
+                height: 97px;  
+                bottom: 20px;
+            }
+            svg{
+                width: 40px;
+                height: 40px;
+                fill: $green3;
+            }
+        }
+    }
+
+    h6{
+        font-family: $montserrat;
+        @include font-size($c-card-font-sizes);
+        font-weight: $bold;
+    }
+
+    
+    h2{
+        font-family: $montserrat;
+        @include font-size($c-card-large-font-sizes);
+        font-weight: $bold;
+        position: absolute;
+        bottom: 0;
+    }
+
+}
+
+.c-card-green{
+   background: rgb(86,79,242);
+   background: -moz-linear-gradient(left,  rgba(86,79,242,1) 0%, rgba(70,197,176,1) 0%, rgba(59,158,171,1) 100%);
+   background: -webkit-linear-gradient(left,  rgba(86,79,242,1) 0%,rgba(70,197,176,1) 0%,rgba(59,158,171,1) 100%);
+   background: linear-gradient(to right,  rgba(86,79,242,1) 0%,rgba(70,197,176,1) 0%,rgba(59,158,171,1) 100%);
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#564ff2', endColorstr='#3b9eab',GradientType=1 );
+}
+
+.c-card-blue{
+background: rgb(86,79,242);
+background: -moz-linear-gradient(left,  rgba(86,79,242,1) 0%, rgba(140,157,251,1) 0%, rgba(119,132,240,1) 100%);
+background: -webkit-linear-gradient(left,  rgba(86,79,242,1) 0%,rgba(140,157,251,1) 0%,rgba(119,132,240,1) 100%); 
+background: linear-gradient(to right,  rgba(86,79,242,1) 0%,rgba(140,157,251,1) 0%,rgba(119,132,240,1) 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#564ff2', endColorstr='#7784f0',GradientType=1 ); 
+&::before{
+    background-color: $blue7;
+    
+}
+.card-body{
+        .card-icon{
+            border: 5px solid $blue2;
+            svg{
+                fill: $blue3;
+            }
+        }
+
+    }
+}
+
+.c-card-orange{
+background: rgb(86,79,242);
+background: -moz-linear-gradient(left,  rgba(86,79,242,1) 0%, rgba(248,173,155,1) 0%, rgba(244,145,144,1) 100%);
+background: -webkit-linear-gradient(left,  rgba(86,79,242,1) 0%,rgba(248,173,155,1) 0%,rgba(244,145,144,1) 100%);
+background: linear-gradient(to right,  rgba(86,79,242,1) 0%,rgba(248,173,155,1) 0%,rgba(244,145,144,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#564ff2', endColorstr='#f49190',GradientType=1 );
+    &::before{
+        background-color: $orange2;
+        
+    }
+    .card-body{
+        .card-icon{
+            border: 5px solid $orange3;
+            svg{
+                fill: $orange4;
+            }
+        }
+
+    }
+}
+
+.c-card-purple{
+background: rgb(86,79,242); /* Old browsers */
+background: -moz-linear-gradient(left,  rgba(86,79,242,1) 0%, rgba(179,98,232,1) 0%, rgba(199,118,250,1) 100%);
+background: -webkit-linear-gradient(left,  rgba(86,79,242,1) 0%,rgba(179,98,232,1) 0%,rgba(199,118,250,1) 100%);
+background: linear-gradient(to right,  rgba(86,79,242,1) 0%,rgba(179,98,232,1) 0%,rgba(199,118,250,1) 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#564ff2', endColorstr='#c776fa',GradientType=1 ); 
+    &::before{
+        background-color: $violet8;
+        
+    }
+    .card-body{
+        .card-icon{
+            border: 5px solid $violet9;
+            svg{
+                fill: $violet9;
+            }
+        }
+
+    }
+}
+
+.c-card-pink{
+
+background: rgb(86,79,242);
+background: -moz-linear-gradient(left,  rgba(86,79,242,1) 0%, rgba(205,72,158,1) 0%, rgba(175,58,129,1) 100%);
+background: -webkit-linear-gradient(left,  rgba(86,79,242,1) 0%,rgba(205,72,158,1) 0%,rgba(175,58,129,1) 100%);
+background: linear-gradient(to right,  rgba(86,79,242,1) 0%,rgba(205,72,158,1) 0%,rgba(175,58,129,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#564ff2', endColorstr='#af3a81',GradientType=1 );
+    &::before{
+        background-color: $pink5;
+        
+    }
+    .card-body{
+        .card-icon{
+            border: 5px solid $pink6;
+            svg{
+                fill: $pink6;
+            }
+        }
+
+    }
+}
+
+.c-card-sky{
+background: rgb(86,79,242); /* Old browsers */
+background: -moz-linear-gradient(left,  rgba(86,79,242,1) 0%, rgba(164,142,243,1) 0%, rgba(56,123,234,1) 100%); 
+background: -webkit-linear-gradient(left,  rgba(86,79,242,1) 0%,rgba(164,142,243,1) 0%,rgba(56,123,234,1) 100%); 
+background: linear-gradient(to right,  rgba(86,79,242,1) 0%,rgba(164,142,243,1) 0%,rgba(56,123,234,1) 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#564ff2', endColorstr='#387bea',GradientType=1 ); 
+    &::before{
+        background-color: $skyblue1;
+        
+    }
+    .card-body{
+        .card-icon{
+            border: 5px solid $skyblue2;
+            svg{
+                fill: $skyblue2;
+            }
+        }
+
+    }
+}

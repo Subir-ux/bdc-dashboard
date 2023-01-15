@@ -1,0 +1,82 @@
+.bottom-booter{
+    border-top:1px solid rgba(0,0,0,0.12);
+    padding: 8px 0;
+}
+.o-footer{
+    background: $white1;
+    // padding:  15px 0px;
+    // height: 57px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    @include media(">=ltablet"){
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &--logo{
+        display: flex;
+        align-items: center;
+        color: $violet10;
+        @include font-size($footer-logo-font-sizes);
+        font-family: $montserrat;
+        font-weight: $bold;
+        img{
+            width: 33px;
+            margin-right: 5px;
+        }
+        span{
+            margin-left: 30px;
+        }
+    }
+    &--menu{
+        .nav{
+            justify-content: center;
+            @include media(">=ltablet"){
+                justify-content: inherit;
+            }
+        }
+        .nav-item{
+            position: relative;
+            text-align: center;
+            @include media(">=ltablet"){
+                &::after{
+                    content: "/";
+                    position: absolute;
+                    top: 7px;
+                    left: 0px;
+                }
+                &:first-child{
+                    &::after{
+                        display: none;
+                    }
+                }
+            }
+            .nav-link{
+                @include font-size($footer-text-font-sizes);
+                font-family: $montserrat;
+                font-weight: $bold;
+                color: $gray7;
+                padding-bottom: 0px;
+                @include media(">=ltablet"){
+                    padding-bottom: 0.5rem;
+                }
+            }
+        }
+    }
+    &--copyright-text{
+        p{
+            color: $gray7;
+            @include font-size($footer-text-font-sizes);
+            font-family: $montserrat;
+            font-weight: $bold;
+            text-align: center;
+            margin-top:15px;
+            @include media(">=ltablet"){
+                text-align: right;
+                margin-top:0px;
+            }
+        }
+    }
+}

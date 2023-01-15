@@ -1,0 +1,379 @@
+
+.o-container-wrapper{
+    position: relative;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin: 0 auto;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    width: auto;
+}
+
+.o-sidebar-wrapper{
+    .o-fixed-sidebar{
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        width: 60px;
+        height: 100%;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 50px;
+        background: rgb(86,79,242);
+        background: -moz-linear-gradient(top,  rgba(86,79,242,1) 0%, rgba(148,82,228,1) 100%);
+        background: -webkit-linear-gradient(top,  rgba(86,79,242,1) 0%,rgba(148,82,228,1) 100%);
+        background: linear-gradient(to bottom,  rgba(86,79,242,1) 0%,rgba(148,82,228,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#564ff2', endColorstr='#9452e4',GradientType=0 );
+        @include media(">ltablet"){
+            width: 70px;
+        }
+        @include media(">=mmmmdesktop"){
+            width: 80px;
+        }
+        @include media(">=defaultdesktop"){
+            width: 90px;
+        }
+        @include media(">=mac"){
+            width: 102px;
+        }
+        &--main-menu{
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            li{
+                margin-top: 15px;
+                a{list-style: none;
+                    height: 100%;
+                    background-color: transparent;
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 6px;
+                    text-decoration: none;
+                    transition: all 0.3s ease;
+                   i{
+                    min-width: 60px;
+                    border-radius: 6px;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 20px;
+                    color: $white;
+                    transition: all 0.3s ease;
+                   }
+                }
+            }
+        }
+        &--logo{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 35px;
+            img{
+                width: 30px;
+            }
+        }
+        &--bottom-menu{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 50px;
+            svg{
+                width: 24px;
+                height: 24px;
+                fill: #fff;
+            }
+        }
+        &--profiledp{
+            width: 35px;
+            height: 35px;
+            border-radius: 100%;
+            margin-top: 20px;
+            position: relative;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: top;
+                border-radius: 100%;
+            }
+            .profileactive{
+                width: 9px;
+                height: 9px;
+                border-radius: 100%;
+                background: $profile-active;
+                position: absolute;
+                top: 0;
+                left: -1px;
+    
+            }
+        }
+    }
+    
+}
+
+.toggle-btn{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: $skyblue3;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: -9px;
+    top: 29px;
+    cursor: pointer;
+    @include media(">=mac"){
+        width: 33px;
+        height: 33px;
+    }
+    svg{
+        width: 16px;
+        height: 16px;
+        &.toggle-left-icon{
+            stroke:$white;
+        }
+        &.toggle-left-icon{
+            stroke:$violet21;
+        }
+    }
+
+}
+
+.closetoggle{
+    background: $white;
+}
+
+.o-collapsed-sidebar{
+    background: rgb(86,79,242);
+    background: -moz-linear-gradient(top,  rgba(86,79,242,1) 0%, rgba(148,82,228,1) 100%);
+    background: -webkit-linear-gradient(top,  rgba(86,79,242,1) 0%,rgba(148,82,228,1) 100%);
+    background: linear-gradient(to bottom,  rgba(86,79,242,1) 0%,rgba(148,82,228,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#564ff2', endColorstr='#9452e4',GradientType=0 );
+    display: block !important;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 14px 0px 0px 60px;
+    border: 0;
+    position: fixed;
+    left: -320px;
+    top: 0;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-box-shadow: 9px 0 5px -3px #0000001c;
+    -moz-box-shadow: 9px 0 5px -3px #0000001c;
+    box-shadow: 9px 0 5px -3px #0000001c;
+    @include media(">ltablet"){
+        padding: 14px 0px 0px 70px;
+    }
+    @include media(">=mmmmdesktop"){
+        padding: 14px 0px 0px 80px;
+    }
+    @include media(">=defaultdesktop"){
+        padding: 14px 0px 0px 90px;
+    }
+    @include media(">=mac"){
+        padding: 14px 0px 0px 102px;
+        width: 330px;
+    }
+    &::before{
+        content: "";
+        width: 1px;
+        height: 100%;
+        position: absolute;
+        left: 60px;
+        top: 68px;
+        background: rgba(255, 255, 255,0.2);
+        @include media(">ltablet"){
+            left: 70px;
+        }
+        @include media(">=mmmmdesktop"){
+            left: 80px;
+        }
+        @include media(">=defaultdesktop"){
+            left: 90px;
+        }
+        @include media(">=mac"){
+            left: 102px;
+        }
+
+    }
+    &.slideInn {
+        left: 0 !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+    &--menu{
+        li{
+            a{
+                color: $white;
+                padding: .5rem 0.6rem;
+                font-family: $montserrat;
+                @include font-size($sidebar-menulink-font-sizes);
+                font-weight: $regular;
+                svg{
+                    width: 20px;
+                    height: 20px;
+                    fill: rgba(255, 255, 255,0.5);
+                    margin-right: 5px;
+                    margin-left: inherit;
+                }
+                &:hover, &:focus{
+                    color: $white;
+                }
+            }
+        }
+    }
+    &--sub-menu{
+        position: relative;
+        margin-left: 17px;
+        &::before{
+            content:'';
+            width: 2px;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background: rgba(255, 255, 255,0.5);
+        }
+        li{
+            a{
+                color: rgba(255, 255, 255,0.5) ;
+                padding-top: 2px;
+                padding-bottom: 2px;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                transition: all 0.2s;
+                position: relative;
+                &::before{
+                    content: "";
+                    width: 2px;
+                    height: 100%;
+                    background: $white;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    opacity: 0;
+                    transition: all 0.2s;
+                }
+                &:hover, &:focus{
+                    color: $white;
+                    padding-left: 1.6rem;
+                    background: rgba(255, 255, 255, 0.1);
+                }
+                &:hover{
+                    &::before{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    &--footer-image{
+        position: relative;
+        .sidebar-ftr-img-wrap{
+            width: 100%;
+            height: 242px;
+            padding: 14px;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 35px;    
+                -webkit-box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.75);
+                -moz-box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.75);
+                box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+            }
+        }
+        .sidebar-ftr-img-content{
+            position: absolute;
+            bottom: 32px;
+            left: 0;
+            width: 100%;
+            h6{
+                color: $white;
+                font-family: $montserrat;
+                @include font-size($link-font-sizes);
+                font-size: 14px;
+                font-weight: $regular;
+                text-align: center;
+                margin-bottom: 8px;
+            }
+            .sidebar-logo-wrap{
+                .android-logo{
+                    width: 30px;
+                    height: 30px;
+                    overflow: hidden;
+                    margin-right: 10px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                }
+                .apple-logo{
+                    width: 30px;
+                    height: 30px;
+                    overflow: hidden;
+                    margin-left: 10px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                }
+            }
+
+        }
+    }
+    &--footer{
+        p{
+            text-align: center;
+            color:$white;
+            @include font-size($footer-sidebar-font-sizes);
+            font-family: $montserrat;
+            font-weight: $regular;
+            padding: 0 30px;
+            line-height: 18px !important;
+        }
+    }
+}
+
+.logo-text{
+    h1{
+        color: $white;
+        margin-top: 8px;
+        @include font-size($logo-sidebar-font-sizes);
+        font-family: $montserrat;
+        font-weight: $bold;
+        text-transform: lowercase;
+    }
+}
+.sidebar-menu-wrapper{
+    padding-right: 10px;
+    &.o-custom-scroll{
+        height: calc(100% - 359px);
+        overflow-x: auto;
+        overflow-x: hidden;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+    }
+}

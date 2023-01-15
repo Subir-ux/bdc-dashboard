@@ -1,0 +1,69 @@
+.o-header{
+    .container-fluid{
+        .header-nav-wrapper{
+            padding: 5px 0px;
+            .header-left-container{
+                h1{
+                    color: $black;
+                    font-family: $montserrat;
+                    @include font-size($heading-font-sizes);  
+                    margin-bottom: 0;
+                    font-weight: $bold;              
+                }
+                p{
+                    color: $gray;
+                    font-family: $montserrat;
+                    @include font-size($link-font-sizes);  
+                }
+            }
+            .header-right-container{
+                ul{
+                    list-style: none;
+                    display: flex;
+                    align-items: center;
+                    li{
+                        width: 32px;
+                        height: 32px;
+                        background: $white1;
+                        border-radius: 10px;
+                        box-shadow: 5px 5px 10px $gray6;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 0 6px;
+                        position: relative;
+                        @include media(">=exldesktop"){
+                            width: 51px;
+                            height: 51px;
+                            margin: 0 12px;
+                        }
+                        a{
+                            svg{
+                                width: 20px;
+                                height: 20px;
+                                fill:$skyblue3
+                            }
+                            .notification-icon{
+                                transform: rotate(17deg);
+                            }
+                            .notification-status{
+                                width: 7px;
+                                height: 7px;
+                                background:$pink12;
+                                border-radius: 100%;
+                                position: absolute;
+                                top: 0;
+                                right: 0px;
+                                @include media(">=exldesktop"){
+                                    width: 13px;
+                                    height: 13px;
+                                    right: -5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
